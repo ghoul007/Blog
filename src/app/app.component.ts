@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Post } from './post';
+import *  as firebase from 'firebase';
 
 @Component({
   selector: 'app-root',
@@ -7,18 +7,17 @@ import { Post } from './post';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  posts: any = [
-    new Post("Mon premier post",
-      "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprime",
-      0),
-    new Post("Mon deuxieme post",
-      "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprime",
-      0),
-    new Post("Encore un post",
-      "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprime",
-      0),
 
-  ]
+  constructor(){
+    var config = {
+      apiKey: "AIzaSyBi1jDXuhq2_obHdlGQpvNUJTBcMGdPs9Y",
+      authDomain: "blogs-e4ccc.firebaseapp.com",
+      databaseURL: "https://blogs-e4ccc.firebaseio.com",
+      projectId: "blogs-e4ccc",
+      storageBucket: "blogs-e4ccc.appspot.com",
+      messagingSenderId: "664339159936"
+    };
+    firebase.initializeApp(config);
+  }
 
 }

@@ -1,4 +1,4 @@
 # Angular blog
 
- [Demo](https://ghoul007.github.io/Blog/) version 6.0.8.
+ [Demo](https://blogs-e4ccc.firebaseapp.com)  
  

@@ -1,0 +1,23 @@
+<div class="nav navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li routerLinkActive="active">
+        <a routerLink="posts">Posts</a>
+      </li>
+      <li routerLinkActive="active">
+        <a routerLink="post/new">new Post</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav pull-right">
+      <li routerLinkActive="active" *ngIf="!isAuth">
+        <a routerLink="signup">Inscription </a>
+      </li>
+      <li routerLinkActive="active" *ngIf="!isAuth">
+        <a routerLink="signin">Connexion</a>
+      </li>
+      <li routerLinkActive="active" *ngIf="isAuth" >
+        <a href="javascript:void(0)"  (click)="logout()">Deconnexion</a>
+      </li>
+    </ul>
+  </div>
+</div>
